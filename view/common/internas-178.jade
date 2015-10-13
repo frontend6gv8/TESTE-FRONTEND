@@ -1,0 +1,29 @@
+extends ../../template
+
+block active
+    -var currentUrl="destino"
+
+block content
+    .container
+        header(class="page-header pseudo-dotted")
+            h1(class="block bg-green") DESTINOS
+
+        .page-content
+            -for(var i=0; i<3; i++)
+                .item-block
+                    .row
+                        .col-sm-3
+                            .item-internas
+                                    figure(class="ilustracao")
+                                        img(src="imagens/conteudo/img-387x387.jpg", alt="", title="", class='img-responsive img-thumbnail')
+
+                        .col-sm-9
+                            .dados
+                                h2 Nome do Serviço
+                                .hidden-xs
+                                    span(class="descricao") Descrição
+                                    p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id odit dolores tenetur unde, explicabo rem asperiores! Officiis minima exercitationem quis inventore, illo eveniet quod quaerat eos placeat ex at tempore perferendis, quae eius nemo sequi sint officia autem enim commodi vitae ratione aliquam velit dicta unde. A, veritatis!
+                                a(href="servicos-detalhes.html", class="btn btn-custom pull-right btn-xs-block") Saiba Mais
+
+        footer(class="page-footer text-center")
+            include paginacao

@@ -1,0 +1,57 @@
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	// DEFINIÇÃO PARA TABLET
+	.navbar-header{display: block !important; width: 100%;}
+	.navbar-toggle{display: block !important; float: right;}
+	.navbar-collapse{float: left;}
+	.navbar-collapse.collapse{display: none !important;}
+	.navbar-collapse.collapse.in{display: block !important;}
+
+	.navbar-brand{float: left;}
+	.nav-lateral .default-painel h3{display: inline-block;}
+	.navbar-toggle{
+		z-index: 299;
+		padding: 0;
+		margin: 10px;
+
+		position: absolute;
+		right: 15px;
+		top: 15px;
+
+		i{
+			position: relative;
+			color: rgba($link-hover, 1);
+		}
+	}
+
+	.navbar-toggle{
+		@include clearfix();
+
+		.line-bars{
+			display: block;
+			min-width: 35px;
+			height: 3px;
+			background: rgba($link-hover, 1);
+			margin: 5px 0;
+			@include transition(all .6s);
+		}
+	}
+
+	.nav-lateral{
+		@include clearfix();
+	}
+
+	.navbar-toggle.open{
+		min-height: 35px;
+		.line-bars{
+			&:nth-child(1){@include transform(rotate(45deg));}
+			&:nth-child(2){@include opacity(0);}
+			&:nth-child(3){@include transform(rotate(-45deg)); position: absolute; bottom: 13px;}
+		}
+	}
+}
+
+@mixin tablet(){
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		@content;
+	}
+}

@@ -1,0 +1,11 @@
+@mixin make-icon($width,$height,$bg-position){
+	width:$width;
+	height:$height;
+	background-position:$bg-position;
+}
+
+@mixin svg-icon($width,$height,$background){
+	width:$width;
+	height:$height;
+	background:$background;
+}

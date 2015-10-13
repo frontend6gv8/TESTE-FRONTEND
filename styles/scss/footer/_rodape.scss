@@ -1,0 +1,65 @@
+.rodape{
+    position: relative;
+    margin-top: 15px;
+    border-top: 5px solid $link-hover;
+    background: $bg-wrapper;
+
+    .redes-sociais{
+        display: inline-block;
+
+        list-style: none;
+        padding: 0;
+
+        @include clearfix();
+
+        li{
+            float: left;
+            margin: 30px 10px;
+        }
+    }
+
+    .contatos-footer{
+        list-style: none;
+        padding: 0;
+
+        @include clearfix();
+
+        li{
+            position: relative;
+            padding-left: 45px;
+
+            @include large(){
+                width: 50%;
+                max-width: 50%;
+                min-height: 75px;
+                float: left;
+            }
+
+            @include mobile(){
+                &:first-child{
+                    margin-top: 0;
+                }
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+
+                margin: 40px 0;
+            }
+
+            p{
+                font-family: "OpenSansLight";
+                font-size: 14px;
+                color: rgba(#393940, 1);
+
+                line-height: 100%;
+            }
+
+            .icon{
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}

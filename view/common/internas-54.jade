@@ -1,0 +1,63 @@
+extends ../../template
+
+block active
+    -var currentUrl = "depoimentos"
+
+block content
+    header(class="page-header")
+        h1(class="border-purple block") depoimentos
+
+    .page-content
+        -for(var i=0; i<3; i++)
+            article(class="depoimento")
+                .row
+                    figure(class="col-sm-3", class='#{i%2==0?"pull-left":"pull-right"}')
+                        img(src="imagens/conteudo/img-400x400.jpg", alt="", title="", class="img-responsive img-thumbnail")
+
+                    .col-sm-9
+                        .dados-internas
+                            h2 Nome
+                            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente sunt tempora est possimus natus quis in esse laborum, magnam! Facere quos debitis modi consectetur in doloremque reiciendis dignissimos, repudiandae quasi totam commodi, esse voluptatibus qui, ex ea. Quisquam optio necessitatibus amet temporibus perspiciatis a facere, non laboriosam molestias?
+
+    footer(class="page-footer text-center")
+        include ./paginacao.jade
+
+    .formulario-custom
+        form(id="", method="", action="")
+            legend Envie seu depoimento
+            .row
+                .col-md-6
+                    table(width="100%")
+                        tr
+                            td(width="20%" valign="top") #[label(for="nome") Nome:]
+                            td(width="80%") #[input(type="text", id="nome", class="input-form")]
+
+                        //- form-group
+
+                        tr
+                            td(width="20%" valign="top") #[label(for="telefone") Telefone:]
+                            td(width="80%") #[input(type="text", id="telefone", class="input-form")]
+
+                        //- form-group
+
+                        tr
+                            td(width="20%" valign="top") #[label(for="email") E-mail:]
+                            td(width="80%") #[input(type="email", id="email", class="input-form")]
+
+                        //- form-group
+
+                        tr
+                            td(width="20%" valign="top") #[label(for="foto") Sua foto:]
+                            td(width="80%") #[input(type="file", id="foto", class="input-form")]
+
+                        //- form-group
+
+                .col-md-6
+                    .form-group
+                        table(width="100%")
+                            tr
+                                td(width="20%" valign="top") #[label(for="depoimento") Depoimento:]
+                                td(width="80%") #[textarea(id="depoimento", class="input-form", rows="10", columns="5")]
+
+            .text-center
+                button(type="submit", class="btn btn-custom") Enviar

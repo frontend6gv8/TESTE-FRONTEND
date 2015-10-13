@@ -1,0 +1,133 @@
+doctype html
+html(lang="pt-br")
+	head
+		meta(charset="utf-8")
+		meta(name="description", content="")
+		meta(name="viewport", 	 content="width=device-width, initial-scale=1")
+		meta(name="theme-color", content="#FFF")
+
+		link(rel="icon", type="text/icon", href="imagens/favicon.ico")
+		link(rel="stylesheet", type="text/css", href="styles/estilos.min.css")
+
+		block title
+			title Default Title
+			//- /.title
+	body
+		noscript
+			.alert.alert-warning.alerta-noscropt.txt-c
+				h1 Seu navegador está com os scripts desabilitados
+				p(class="h3") Para Melhor funcionamento do site, habilite-os
+			.space
+		//- /.noscript
+
+		#fb-root
+		script.
+			(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "http://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+
+		//- ##############
+			### MIXINS ###
+			##############
+
+		mixin fb-likebox
+			div(class="fb-page", data-href="https://www.facebook.com/facebook", data-small-header="false", data-adapt-container-width="true", data-hide-cover="false", data-show-facepile="true", data-show-posts="false")
+
+		//- ##############
+			### MIXINS ###
+			##############
+
+		section(class="wrapper")
+			header(class="topo")
+				.container
+					.content-topo
+						.row
+							.col-md-2
+								include ./view/common/navbar-header.jade
+
+							.col-md-10
+								address(class="address-header text-right hidden-xs")
+									span (11) 3090-0111
+
+									ul(class="redes-sociais")
+										li #[a(href="#", target="_blank"): i(class="icon ic-face ic-small")]
+										li #[a(href="#", target="_blank"): i(class="icon ic-twit ic-small")]
+
+									//- redes-sociais
+
+								//- address-header
+
+								block active
+									-var currentUrl = "home"
+
+								nav(class="menu-header")
+									ul(class="navbar-collapse collapse", id="menu")
+										li(class={"active": currentUrl == "home"}) #[a(href="#") HOME]
+										li(class={"active": currentUrl == "institucional"}) #[a(href="#") QUEM SOMOS]
+										li(class={"active": currentUrl == "servicos"}) #[a(href="#") SERVIÇOS]
+										li(class={"active": currentUrl == "clientes"}) #[a(href="#") CLIENTES]
+										li(class={"active": currentUrl == "orcamento"}) #[a(href="#") ORÇAMENTO]
+										li(class={"active": currentUrl == "contato"}) #[a(href="#") CONTATO]
+
+									//- menu
+								//- menu-header
+
+			//- topo
+
+			section(class="conteudo")
+				block content
+				//- .content
+			//- .conteudo
+
+		footer(class="rodape")
+			.container
+				.text-center
+					ul(class="redes-sociais")
+						li #[a(href="#", target="_blank"): i(class="icon ic-face ic-big")]
+						li #[a(href="#", target="_blank"): i(class="icon ic-twit ic-big")]
+
+					//- redes-sociais
+
+				.row
+					.col-sm-6.col-md-8
+						ul(class="contatos-footer")
+							li #[i(class="icon ic-phone")] #[p (11) 2392-2321] #[p (11) 2392-2321]
+							li #[i(class="icon ic-email")] #[p contato@dominio.com.br]
+							li #[i(class="icon ic-local")] #[p Rua do Cliente, 21-30] #[p CEP: 00000-000, Vila do Cliente] #[p Cidade/Estado]
+
+						//- footer-contatos
+					//-.col-sm-6 col-md-8
+
+					.col-sm-6.col-md-4
+						+fb-likebox
+
+					//-.col-sm-6 col-md-4
+				//- row
+
+				.creditos
+					figure(class="pull-right")
+						a(href="#", target="_blank")
+							img(src="imagens/institucional/logo-gv8.png", alt="", title="", class="img-responsive")
+
+					//- pull-right
+
+					.pull-right
+						span Max Premier © Todos os direitos reservados
+						span Criação de Sites: GV8 sites e Sistemas
+
+					//- pull-right
+				//- creditos
+			//- container
+		//- .rodape
+
+
+		script(src="js/starter.min.js")
+		script(src="js/scripts.js")
+		//-[if lt IE 9]> script(src="js/html5shiv.min.js") <![endif]
+
+	//- /.head
+//- /.html

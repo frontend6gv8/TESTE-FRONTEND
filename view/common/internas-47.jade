@@ -1,0 +1,39 @@
+extends ../template
+
+block active
+    -var currentUrl = "contato"
+
+block content
+    .container
+        header(class="page-header")
+            h1(class="color-orange") Fale Conosco
+
+        .page-content
+            .row
+                .col-sm-6
+                    form(id="", method="", action="")
+                        .form-group
+                            label(for="nome") Nome:
+                            input(type="text", id="nome", class="form-control")
+
+                        .form-group
+                            label(for="email") E-mail:
+                            input(type="email", id="email", class="form-control")
+
+                        .form-group
+                            label(for="telefone") Telefone:
+                            input(type="text", id="telefone", class="form-control")
+
+                        .form-group
+                            label(for="assunto") Assunto:
+                            input(type="text", id="assunto", class="form-control")
+
+                        .form-group
+                            label(for="mensagem") Mensagem:
+                            textarea(name="", rows="10", class="form-control")
+
+                        input(type="submit", class="btn btn-custom btn-lg pull-right", value="Enviar")
+
+                .col-sm-6.hidden-xs
+                    p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum ducimus repellendus nisi libero, ab! Tempora optio sit corrupti voluptatum hic, asperiores sint, minus pariatur, molestias nihil perferendis quaerat id aspernatur expedita quisquam?
+                    div(class="maps-contato")&attributes({'data-iframe-height':'350px'}, {'data-iframe-width': '100%'}, {'data-iframe-src':'https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14702.008968339947!2d-49.61537705!3d-22.8948389!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1438866914283'})

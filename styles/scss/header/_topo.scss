@@ -1,0 +1,77 @@
+.topo{
+    position: fixed;
+    z-index: 1999;
+    top: 0;
+
+    @include large(){
+        left: 50%;
+        @include transform(translateX(-50%));
+    }
+
+    @include mobile(){
+        position: relative;
+    }
+
+    .logo{
+        max-width: 100px;
+        @include transition(all .6s);
+    }
+
+    .content-topo{
+        display: block;
+        padding: 0 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background: rgba(#FFF, 1);
+
+        .address-header{
+            margin: 10px;
+
+            font-family: "OpenSansLight";
+            font-size: 14px;
+            color: rgba(#393939, 1);
+
+            span{
+                display: inline-block;
+                margin-right: 15px;
+            }
+            .redes-sociais{
+                padding: 0;
+                list-style: none;
+                display: inline-block;
+                @include clearfix();
+
+                li{
+                    float: left;
+                    margin: 10px 5px -20px;
+                }
+            }
+        }
+    }
+
+    .scrolling{
+        @include large(){
+            .address-header{
+                display: none;
+            }
+
+            .logo{
+                padding: 3px 0;
+                max-width: 70px;
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            .menu-header #menu li{
+                a{
+                    padding: 32px 5px;
+                    vertical-align: middle;
+                    border-radius: 0;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

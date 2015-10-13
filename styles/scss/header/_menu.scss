@@ -1,0 +1,66 @@
+.menu-header{
+    position: relative;
+
+    @include large(){
+        text-align: right;
+        margin-bottom: -5px;
+    }
+
+    @include mobile(){
+        margin: 20px 0;
+    }
+
+    #menu{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        @include large(){
+            display: inline-block !important;
+        }
+
+        @include tablet(){
+            width: 100%;
+        }
+
+        li{
+            @include large(){
+                float: left;
+                margin: 0 15px;
+            }
+
+            a{
+                @include large(){
+                    padding: 15px 5px;
+
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                }
+
+                @include tablet(){
+                    padding: 20px 15px;
+                }
+
+                @include mobile(){
+                    padding: 20px 15px;
+                }
+
+                display: block;
+
+                font-family: "OpenSansLight";
+                font-size: 14px;
+                color: rgba(#393939, 1);
+                @include transition(all .3s);
+            }
+        }
+
+        .active,
+        li:hover{
+            a{
+                text-decoration: none;
+                color: rgba(#FFF, 1);
+                background: $link-hover;
+            }
+        }
+    }
+}

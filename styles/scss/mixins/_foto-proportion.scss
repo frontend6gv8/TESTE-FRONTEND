@@ -1,0 +1,14 @@
+@mixin foto-proportion($width,$height){
+	$canvas: ($height / $width) * 100%;
+	position:relative;
+	padding-bottom:$canvas;
+	overflow:hidden;
+
+	img{
+		max-width:100%;
+		height:auto;
+		position:absolute;
+		top:0;
+		left:0;
+	}
+}

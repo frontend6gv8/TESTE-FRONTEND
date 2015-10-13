@@ -1,0 +1,32 @@
+.icon{
+	position: relative;
+	display: inline-block;
+	background: $bg-sprites;
+}
+
+.ic-face{
+    @include make-icon(22px, 23px, -39px -5px);
+}
+
+.ic-twit{
+    @include make-icon(22px, 23px, -102px -5px);
+}
+
+.ic-twit.ic-big,
+.ic-face.ic-big{
+    width: 53px;
+    height: 54px;
+    background-position-y: -34px;
+}
+
+.ic-phone{
+    @include make-icon(24px, 24px, -6px -5px);
+}
+
+.ic-local{
+    @include make-icon(18px, 26px, -5px -36px);
+}
+
+.ic-email{
+    @include make-icon(26px, 18px, -5px -69px);
+}

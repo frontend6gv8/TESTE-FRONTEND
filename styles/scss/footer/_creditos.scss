@@ -1,0 +1,14 @@
+.creditos{
+    position: relative;
+    margin: 10px 0;
+    @include clearfix();
+
+    span{
+        font-family: Verdana, Sans-serif;
+        font-size: 11px;
+        color: rgba(#393939, 1);
+        display: block;
+
+        margin-right: 25px;
+    }
+}

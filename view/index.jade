@@ -1,0 +1,101 @@
+extends ../template.jade
+
+block content
+    article(class="banners")
+        include ./common/banner.jade
+    //- banners
+
+    article(class="produtos")
+        .container
+            section(class="carousel", id="carousel-produtos")&attributes({"data-interval":"6000"}, {"data-carousel-qnt":"3"})
+                ol(class="carousel-indicators", id="pager-produtos")
+                    -for(var i=0; i<3; i++)
+                        li(data-target="#carousel-produtos", data-slide-to="#{i}", class={"active": i==0})
+
+                //- carousel-indicators
+
+                .carousel-inner
+                    -for(var i=3; i>=1; i--)
+                        div(class="item", class={"active": i==3})
+                            .produto
+                                figure(class="prod-icon")
+                                    -if(i%2==0)
+                                        img(src="../imagens/institucional/icon-prod-limpeza.png", alt="", title="", class="img-responsive")
+                                    -else if(i%3==0)
+                                        img(src="../imagens/institucional/icon-prod-portaria.png", alt="", title="", class="img-responsive")
+                                    -else
+                                        img(src="../imagens/institucional/icon-prod-manutencao.png", alt="", title="", class="img-responsive")
+
+                                //- figure
+
+                                .prod-dados
+                                    h2 NOME PRODUTO
+                                    p   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit corrupti officia ratione, excepturi ad debitis quas voluptate itaque, cumque corporis molestiae dolore saepe laudantium, praesentium neque omnis modi voluptates magnam asperiores consequuntur.
+                                    a(href="#", class="btn btn-white") SAIBA MAIS
+
+                            //- produto
+                        //- item
+                //- carousel-inner
+
+            //- carousel-produtos
+
+        //- container
+    //- produtos
+
+    article(class="apresentacao")
+        .container
+            .row
+                .col-sm-6.col-md-7
+                    header(class="page-header border-bottom border-white")
+                        h1(class="color-white") QUEM SOMOS
+
+                    //- page-header
+
+                    p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum cupiditate veniam blanditiis iusto, sed rem natus exercitationem libero consectetur eligendi. Voluptatem facilis omnis aperiam rerum cupiditate alias ad reprehenderit enim, perferendis temporibus recusandae deserunt ut at nulla maxime praesentium dolores repellendus fuga similique itaque et quo vitae quibusdam? Qui atque voluptas quisquam recusandae illo laboriosam. Dolorum, optio, animi?
+                    p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id perspiciatis numquam cupiditate sequi, iste in hic pariatur nihil ex tempora aliquam possimus atque incidunt unde laboriosam.
+
+                    a(href="#", class="btn btn-border border-white") SAIBA MAIS
+
+                //- col-md-7
+
+                .col-sm-6.col-md-5
+                    section(class="carousel hidden-xs", id="carousel-apresentacao")&attributes({"data-interval":"6000"})
+                        .carousel-inner
+                            -for(var i=0; i<3; i++)
+                                div(class="item", class={"active":i==0})
+                                    figure(class="ilustrativo")
+                                        a(href="#")
+                                            img(src="../imagens/institucional/img-ilustrativa.png", alt="", title="", class="img-responsive")
+
+                                    //- ilustrativo
+                                //- item
+
+                        .text-center
+                            a(href="#", class="pager pager-prev")&attributes({"data-alvo":"#carousel-apresentacao"}, {"data-carousel":"prev"}) #[i(class="icon ic-prev")]
+                            a(href="#", class="pager pager-next")&attributes({"data-alvo":"#carousel-apresentacao"}, {"data-carousel":"next"}) #[i(class="icon ic-next")]
+
+                    //- carousel-apresentacao
+                //- col-md-5
+            //-row
+        //- container
+    //- apresentacao
+
+    article(class="clientes")
+        .container
+            header(class="page-header border-bottom border-blue")
+                h1(class="color-black") CLIENTES
+
+            //- page-header
+
+            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quisquam distinctio, animi exercitationem placeat pariatur sunt non at maxime nesciunt beatae ex, facilis fugiat soluta eum quod itaque! Nemo fugiat, pariatur error.
+            .row
+                -for(var i=0; i<4; i++)
+                    div(class="col-sm-6 col-md-3")
+                        figure(class="cliente")
+                            a(href="#")
+                                img(src="../imagens/institucional/cliente-default.png", alt="", title="", class="img-responsive")
+
+                    //- col-md-3
+            //- row
+        //- container
+    //- clientes

@@ -1,0 +1,9 @@
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+	// DEFINIÇÃO PARA DESKTOP
+}
+
+@mixin media(){
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+		@content;
+	}
+}

@@ -1,0 +1,23 @@
+$opensans:"OpenSansRegular";// font padrao
+
+$font-padrao-corpo: #{$opensans},Arial,Helvetica,Sans-serif;//font-family do body
+$font-size-padrao:  14px;//font-family do body
+$cor-padrao:        #333;
+
+$link-hover: #00B0F1;//hover dos links
+
+$diretorio-fonts: "../fonts";
+$diretorio-imagens: "../imagens/banner", "../imagens/conteudo", "../imagens/institucional";
+
+$largura-container: 970px;
+// wrapper
+$bg-wrapper: url(#{nth($diretorio-imagens, 3)}/bg-wrapper.jpg) 0 0 repeat-y;
+
+// RODAPE
+$footer-height: 181px;
+
+// SPRITES
+$bg-sprites: url(#{nth($diretorio-imagens, 3)}/sprites.png) 0 0 no-repeat;
+$bg-produtos: url(#{nth($diretorio-imagens, 3)}/bg-produtos.png) center top repeat-y;
+$bg-before-produtos: url(#{nth($diretorio-imagens, 3)}/before-produtos.png) center top no-repeat;
+$bg-apresentacao: url(#{nth($diretorio-imagens, 3)}/bg-apresentacao.jpg) center top no-repeat;

@@ -1,0 +1,7 @@
+@mixin animation($animation-setinings){
+	-webkit-animation:$animation-setinings;
+	-moz-animation:$animation-setinings;
+	-ms-animation:$animation-setinings;
+	-o-animation:$animation-setinings;
+	animation:$animation-setinings;
+}

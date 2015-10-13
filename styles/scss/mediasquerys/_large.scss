@@ -1,0 +1,9 @@
+@media (min-width: $screen-lg-min){
+	// DEFINIÇÃO PARA LARGE DESKTOP
+}
+
+@mixin large(){
+	@media (min-width: $screen-lg-min){
+		@content;
+	}
+}

@@ -1,0 +1,30 @@
+extends ../../template
+
+block active
+    -var currentUrl="servicos"
+
+block content
+    figure(class="topo-internas")
+        img(src="../../imagens/institucional/bg-internas.jpg", alt="", class="img-responsive")
+
+    .header-internas
+        .container
+            header(class="page-header")
+                h1(class="color-white") SERVICOS
+
+    .container
+        .page-content
+            .row
+                -for(var i=0; i<8; i++)
+                    .col-sm-4.col-md-3
+                        .item-internas
+                            a(href="servicos-detalhes.html")
+                                figure(class="ilustracao")
+                                    img(src="imagens/conteudo/img-387x387.jpg", alt="", title="", class='img-responsive img-thumbnail')
+
+                                .dados
+                                    h2 Nome do Serviço
+                                    p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam minima quasi corrupti!
+
+        footer(class="page-footer text-center")
+            include ./paginacao

@@ -1,0 +1,23 @@
+extends ../../template
+
+block active
+    -var currentUrl = "clientes"
+
+block content
+    header(class="page-header")
+        h1(class="block border-purple") GALERIA DE FOTOS
+
+    .page-content
+        .row
+            -for(var i=0; i<8; i++)
+                .col-sm-6.col-md-3
+                    .item-internas
+                        figure(class="ilustracao")
+                            a(href="imagens/conteudo/img-400x400.jpg")&attributes({'data-lightbox':'+FOTO+'})
+                                img(src="imagens/conteudo/img-387x387.jpg", alt="", title="", class='img-responsive img-thumbnail')
+
+                        //- ilustração
+                    //- item-intenas
+
+    footer(class="page-footer text-center")
+        include paginacao

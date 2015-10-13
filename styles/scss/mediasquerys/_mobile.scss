@@ -1,0 +1,37 @@
+@media (max-width: $screen-xs-max) {
+	// DEFINIÇÃO PARA MOBILE
+	.navbar-toggle{
+		@include clearfix();
+		position: absolute;
+		bottom: 0;
+		right: 0;
+
+		.line-bars{
+			display: block;
+			min-width: 35px;
+			height: 3px;
+			background: rgba($link-hover, 1);
+			margin: 5px 0;
+			@include transition(all .6s);
+		}
+	}
+
+	.nav-lateral{
+		@include clearfix();
+	}
+
+	.navbar-toggle.open{
+		min-height: 35px;
+		.line-bars{
+			&:nth-child(1){@include transform(rotate(45deg));}
+			&:nth-child(2){@include opacity(0);}
+			&:nth-child(3){@include transform(rotate(-45deg)); position: absolute; bottom: 16px;}
+		}
+	}
+}
+
+@mixin mobile(){
+	@media (max-width: $screen-xs-max) {
+		@content;
+	}
+}

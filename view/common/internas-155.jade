@@ -1,0 +1,30 @@
+extends ../../template
+
+block active
+    -var currentUrl="destino"
+
+block content
+    .container
+        header(class="page-header pseudo-dotted")
+            h1 DESTINOS
+
+        .page-content
+            .row
+                nav(class="col-md-3")
+                    include ./common/navbar-categorias
+
+                .col-md-9
+                    .row
+                        -for(var i=0; i<6; i++)
+                            .col-sm-6.col-md-4
+                                .item-internas
+                                    a(href="servicos-detalhes.html")
+                                        figure(class="ilustracao")
+                                            img(src="imagens/conteudo/img-387x387.jpg", alt="", title="", class='img-responsive img-thumbnail')
+
+                                        .dados
+                                            h2 Nome do Serviço
+                                            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam minima quasi corrupti!
+
+        footer(class="page-footer text-center")
+            include ./common/paginacao

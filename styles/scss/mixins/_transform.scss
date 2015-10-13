@@ -1,0 +1,15 @@
+@mixin transform($transform){
+	-webkit-transform:$transform;
+	   -moz-transform:$transform;
+		-ms-transform:$transform;
+		 -o-transform:$transform;
+			transform:$transform;
+}
+
+@mixin multiplos-transforms-2-itens($transform1,$transform2){
+	-webkit-transform:#{$transform1} #{$transform2};
+	   -moz-transform:#{$transform1} #{$transform2};
+		-ms-transform:#{$transform1} #{$transform2};
+		 -o-transform:#{$transform1} #{$transform2};
+			transform:#{$transform1} #{$transform2};
+}

@@ -1,0 +1,12 @@
+div(class="carousel slide", id="carousel-banner")&attributes({'data-interval':'6000'}, {"data-carousel-pager":"#pager-banner"})
+    ol(class="carousel-indicators", id="pager-banner")
+
+    .carousel-inner
+        -for(var i=0; i<4; i++)
+            div(class="item", class={"active": i == 0})
+                figure(class="banner")
+                    a(href="#", target="_blank")
+                        if i%2==0
+                            img(src="../../imagens/banner/banner.jpg", alt="", title="", class="img-responsive")
+                        else
+                            img(src="../../imagens/banner/banner001.jpg", alt="", title="", class="img-responsive")

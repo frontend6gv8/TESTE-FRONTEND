@@ -1,0 +1,35 @@
+.paginacao{
+	display: inline-block;
+	padding: 0;
+	list-style: none;
+	border-radius: 5px;
+	border: 1px solid rgba(#CCC, 1);
+ 
+	@include clearfix();
+
+	li{
+		float: left;
+		border-left: 1px solid rgba(#CCC, 1);
+		background: rgba(#FFF, 1);
+		@include transition(all .5s);
+
+		&:first-child{border-left: none;}
+
+		a{
+			display: block;
+			padding:  10px 15px;
+			font-family: "OpenSansRegular";
+			font-size: 14px;
+			color: $link-hover;
+		}
+	}
+
+	li:hover,
+	.active{
+		background: rgba(#DDD, 1);
+		a{
+			color: rgba(#222, 1);
+			text-decoration: none;
+		}
+	}
+}

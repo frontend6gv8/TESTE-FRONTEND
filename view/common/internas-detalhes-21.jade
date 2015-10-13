@@ -1,0 +1,24 @@
+extends ../template
+
+block active
+    -var currentUrl = "servicos"
+
+block content
+    .container
+        header(class="page-header")
+            h1(class="color-orange") Serviços Detalhes
+
+        .page-content
+            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, voluptatum tempore tempora dolor magni atque inventore architecto, voluptates hic necessitatibus reiciendis, totam dignissimos minima molestias cumque eligendi! Dolorem vero magnam sequi fugiat cum repudiandae harum, ducimus possimus saepe. Tempore expedita, doloremque dignissimos quis nostrum iure odio perferendis deleniti sed, nisi rem harum quisquam nam repudiandae voluptate necessitatibus sequi numquam labore ut porro. Debitis ipsa quo molestiae quam explicabo?
+            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quas sunt sapiente error maiores, quaerat, dolor inventore praesentium.
+
+            .row
+                -for(var i=0; i<4; i++)
+                    .col-sm-3
+                        .item-internas
+                            a(href="imagens/conteudo/img-387x387.jpg")&attributes({'data-lightbox':'+SERVICOS+'})
+                                figure(class="thumbnail")
+                                    img(src="imagens/conteudo/img-387x387.jpg", alt="", title="", class='img-responsive')
+
+        footer(class="page-footer text-right")
+            a(href="servicos.html", class="btn btn-custom btn-lg") #[i(class="fa fa-angle-double-left")] Voltar

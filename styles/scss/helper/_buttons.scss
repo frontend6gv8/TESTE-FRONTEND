@@ -1,0 +1,24 @@
+.btn{
+    font-family: "OpenSansLight";
+    font-size: 14px;
+
+    @include mobile(){
+        display: block;
+    }
+}
+
+.btn-white{
+    color: rgba(#2B3784, 1);
+    text-shadow: 0 0 2.5px rgba(#2B3784, 1);
+    border-radius: initial;
+    background: rgba(#FFF, 1);
+}
+
+.btn-border{
+    border: 2px solid transparent;
+}
+
+.border-white{
+    color: #FFF;
+    border-color: rgba(#FFF, 1);
+}

@@ -1,0 +1,31 @@
+.page-header{
+    padding-bottom: 0;
+    border: none;
+
+    h1{
+        font-family: "OpenSansRegular";
+        font-size: 36px;
+    }
+}
+
+.border-bottom{
+    border-bottom-style: solid;
+}
+
+.border-white{
+    border-width: 1px;
+    border-bottom-color: rgba(#FFF, 1);
+}
+
+.border-blue{
+    border-width: 3px;
+    border-bottom-color: $link-hover;
+}
+
+.color-white{
+    color: rgba(#FFF, 1);
+}
+
+.color-black{
+    color: rgba(#3B3B3B, 1);
+}

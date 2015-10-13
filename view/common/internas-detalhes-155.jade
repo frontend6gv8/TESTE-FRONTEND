@@ -1,0 +1,44 @@
+extends ../../template
+
+block active
+    -var currentUrl="servicos"
+
+block content
+    figure(class="topo-internas")
+        img(src="../../imagens/institucional/bg-internas.jpg", alt="", class="img-responsive")
+
+    .header-internas
+        .container
+            header(class="page-header pseudo-dotted")
+                h1(class="color-white") SERVICOS DETALHES
+
+    .container
+        .page-content
+            .row
+                .col-sm-6.col-md-5
+                    figure(class="principal")
+                        a(href="../imagens/conteudo/img-400x400.jpg")&attributes({'data-lightbox':"+PRINCIPAL+"})
+                            img(src="../imagens/conteudo/img-400x400.jpg", alt="", title="", class="img-responsive img-thumbnail")
+
+                    //-principal
+
+                    ul(class="miniaturas")
+                        li #[a(href="#"): img(src="../imagens/conteudo/img-126x126.jpg", alt="", title="", class="img-responsive img-thumbnail")]
+                        li #[a(href="#"): img(src="../imagens/conteudo/img-126x126.jpg", alt="", title="", class="img-responsive img-thumbnail")]
+                        li #[a(href="#"): img(src="../imagens/conteudo/img-126x126.jpg", alt="", title="", class="img-responsive img-thumbnail")]
+                        li #[a(href="#"): img(src="../imagens/conteudo/img-126x126.jpg", alt="", title="", class="img-responsive img-thumbnail")]
+
+                    //- miniaturas
+
+                .col-sm-6.col-md-7
+                    .dados-internas
+                        h2 Nome do Serviço ou Produto
+                        p  Descrição:
+                        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum sapiente tenetur, ipsum veniam praesentium libero sequi amet corrupti fugit maxime nisi laudantium modi commodi esse officia laboriosam inventore blanditiis nam natus voluptatibus numquam unde, minus. Similique soluta at esse dolorum consectetur totam atque voluptatem rerum? Eius eaque veritatis non, harum, ea nobis illo, natus in cum optio quidem? Assumenda excepturi delectus fuga id ea totam perspiciatis laudantium deleniti, blanditiis nisi porro numquam modi. Ullam, quis, impedit. Dolorem voluptate explicabo veritatis labore temporibus, porro nulla at iure impedit nesciunt autem ex rem perferendis perspiciatis tenetur optio quaerat assumenda ab sequi reiciendis! Quisquam eligendi quibusdam odit omnis laboriosam numquam tenetur sit excepturi, ex ipsum eaque aperiam. Omnis accusamus quisquam nostrum repellendus tempore asperiores, explicabo voluptatem dolore magni pariatur reprehenderit quaerat, labore assumenda optio. Voluptates adipisci quae repellat a rerum esse reprehenderit, doloremque eligendi tenetur amet natus sint explicabo quibusdam. Voluptate.
+                        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque magnam error mollitia odio, tenetur amet libero vitae! Provident cumque at, sunt libero optio quos est assumenda totam quae velit consequatur esse dolorum porro nam quidem tenetur ipsam ipsum, ullam vel soluta sit minus ducimus necessitatibus placeat. Ducimus, magnam.
+
+                    //- dados-internas
+            //-row
+
+        footer(class="text-right")
+            a(href="#", class="btn btn-custom") #[i(class="fa fa-angle-double-left")] Voltar

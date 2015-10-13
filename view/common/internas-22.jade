@@ -1,0 +1,31 @@
+extends ../../template
+
+block active
+    -var currentUrl = "clientes"
+
+block content
+    figure(class="topo-internas")
+        img(src="../../imagens/institucional/bg-internas.jpg", alt="", class="img-responsive")
+
+    .header-internas
+        .container
+            header(class="page-header")
+                h1(class="color-white") Clientes
+
+    .container
+        .page-content
+            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea aspernatur deleniti nostrum eveniet vitae unde tempore rem dolor impedit itaque. Nihil repudiandae vitae consequatur eveniet tempore tempora, reprehenderit perspiciatis consectetur quo error iste autem neque soluta eaque quos quas. Aperiam ab voluptates aliquam iure tempore nisi ullam ipsam obcaecati veritatis necessitatibus iusto hic, aliquid deserunt commodi modi error adipisci deleniti quae temporibus, illum quos in officia. Recusandae quas qui odit ipsam ipsum autem, dolorem officia exercitationem sapiente unde natus explicabo illo iusto ea veniam rem consequuntur ipsa modi. Quidem, incidunt ducimus tempore reiciendis tenetur minima magnam.
+            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi vero nobis et minima adipisci, quaerat eveniet, illum quibusdam labore iste fugit blanditiis ipsa beatae. Natus assumenda quia, tempore architecto totam, incidunt animi.
+            .row
+                -for(var i=0; i<8; i++)
+                    .col-sm-6.col-md-3
+                        .item-internas
+                            a(href="#", target="_blank")
+                                figure(class="ilustacao")
+                                    img(src="imagens/conteudo/img-387x387.jpg", alt="", title="", class='img-responsive img-thumbnail')
+
+                                .dados.text-center
+                                    h2 Nome do Cliente
+
+        footer(class="page-footer text-center")
+            include ./paginacao
